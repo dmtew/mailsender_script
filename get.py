@@ -38,7 +38,7 @@ json_ = json.loads(res.text)
 count=0
 for _id_ in json_["data"]["leads"]:
     #  print(json_["data"]["leads"][_id_]["num"])
-    title = 'Обращение от [' + json_["data"]["leads"][_id_]["client"]["name"] + json_["data"]["leads"][_id_]["form_data"]["653702"]["value"] + ']'
+    title = 'Обращение от [' + json_["data"]["leads"][_id_]["client"]["name"] + ' ' + json_["data"]["leads"][_id_]["form_data"]["653702"]["value"] + ']'
     phone = json_["data"]["leads"][_id_]["client"]["phone"]
     email = json_["data"]["leads"][_id_]["client"]["email"]
     #  print(email)
@@ -50,7 +50,7 @@ for _id_ in json_["data"]["leads"]:
         mes = 'Мой номер ' + phone + '\n' + json_["data"]["leads"][_id_]["form_data"]["310277"]["value"]  # Само сообщение
         
     elif "900782" in json_["data"]["leads"][_id_]["form_data"]:
-        mes = 'Мой номер ' + phone + '\n'+ "Хочу получить консультацию " + str(json_["data"]["leads"][_id_]["form_data"]["900782"]["value"]) + str(json_["data"]["leads"][_id_]["form_data"]["283224"]["value"])
+        mes = 'Мой номер ' + phone + '\n'+ "Хочу получить консультацию " + str(json_["data"]["leads"][_id_]["form_data"]["900782"]["value"]) + ' ' + str(json_["data"]["leads"][_id_]["form_data"]["283224"]["value"])
         
     elif "521993" in json_["data"]["leads"][_id_]["form_data"]:
         mes = 'Мой номер ' + phone + '\n'+ "Хочу у вас работать [Резюме загружено во Flexbe]"
