@@ -38,7 +38,7 @@ json_ = json.loads(res.text)
 count=0
 for _id_ in json_["data"]["leads"]:
     #  print(json_["data"]["leads"][_id_]["num"])
-    title = 'Обращение от [' + json_["data"]["leads"][_id_]["client"]["name"] + json_["data"]["leads"][_id_]["form_data"]["653702"]["value"] + ]'
+    title = 'Обращение от [' + json_["data"]["leads"][_id_]["client"]["name"] + json_["data"]["leads"][_id_]["form_data"]["653702"]["value"] + ']'
     phone = json_["data"]["leads"][_id_]["client"]["phone"]
     email = json_["data"]["leads"][_id_]["client"]["email"]
     #  print(email)
