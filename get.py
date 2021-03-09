@@ -49,8 +49,8 @@ for _id_ in json_["data"]["leads"]:
     if "310277" in json_["data"]["leads"][_id_]["form_data"]:
         mes = 'Мой номер ' + phone + '\n' + json_["data"]["leads"][_id_]["form_data"]["310277"]["value"]  # Само сообщение
         
-    elif "900782" in json_["data"]["leads"][_id_]["form_data"]:
-        mes = 'Мой номер ' + phone + '\n'+ "Хочу получить консультацию " + str(json_["data"]["leads"][_id_]["form_data"]["653702"]["value"]) + ' ' + str(json_["data"]["leads"][_id_]["form_data"]["900782"]["value"]) + ' ' + str(json_["data"]["leads"][_id_]["form_data"]["283224"]["value"])
+    elif "653702" in json_["data"]["leads"][_id_]["form_data"]:
+        mes = 'Мой номер ' + phone + '\n'+ "Хочу получить консультацию " + str(json_["data"]["leads"][_id_]["form_data"]["653702"]["value"]) + ' ' + str(json_["data"]["leads"][_id_]["form_data"]["283224"]["value"])
         
     elif "521993" in json_["data"]["leads"][_id_]["form_data"]:
         mes = 'Мой номер ' + phone + '\n'+ "Хочу у вас работать [Резюме загружено во Flexbe]"
